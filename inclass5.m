@@ -1,3 +1,6 @@
+%AW: see comment below. 0.8/1.
+
+
 %Inclass assignment 5. 
 function inclass5()
 figure(1)
@@ -23,6 +26,7 @@ end
 % function. (c) Redo part (b) but make the option to specify the fraction
 % of black/white pixels optional with a default value of 1% if not
 % specified. 
+ 
 function image_1percent(image)
 img = imread(image);
 img = img(:,:,1);
@@ -31,6 +35,8 @@ img_new = imadjust(img,low_high,[0.01,0.99]);
 imshow(img_new);
 end
 
+%AW: these don't work correctly, it decreases contrast as fraction is increased rather than
+% increasing it.  -0.2. 
 function image_same(image,fraction)
 img = imread(image);
 img = img(:,:,1);
